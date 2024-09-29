@@ -46,9 +46,12 @@ export const Profiles = () => {
             </figcaption>
           </div>
 
-          <article className={s.backstory}>
-            <Markdown>{item.fields.backstory}</Markdown>
-          </article>
+          <div className={s.backstory}>
+            <div className={s.img_container}>
+              <div className={s.hero}></div>
+            </div>
+            <Markdown className={s.markdown}>{item.fields.backstory}</Markdown>
+          </div>
         </figure>
       ))}
     </section>
