@@ -23,13 +23,15 @@ export const Profiles = () => {
       {profile?.items?.map((item) => (
         <figure className={s.Profile}>
           <div className={s.overview}>
-            <div
-              className={s.hero}
-              style={{
-                backgroundImage: `url(${item.fields.hero.fields.file.url})`,
-              }}
-              alt={item.fields.hero.fields.file.title}
-            ></div>
+            <div className={s.img_container}>
+              <div
+                className={s.hero}
+                style={{
+                  backgroundImage: `url(${item.fields.hero.fields.file.url})`,
+                }}
+                alt={item.fields.hero.fields.file.title}
+              ></div>
+            </div>
             <figcaption>
               <h2 className={s.name}>{item.fields.name}</h2>
               <hgroup>
