@@ -19,12 +19,7 @@ export const Memories = () => {
     <section className={s.Memories}>
       {memory?.items?.map((item) => (
         <figure>
-          <div
-            className={s.img_container}
-            style={{
-              backgroundImage: `url(${item.fields.thumbnail.fields.file.url})`,
-            }}
-          ></div>
+          
           {/* <img src={item.fields.thumbnail.fields.file.url} alt="" /> */}
           <figcaption>
             <article>
@@ -34,6 +29,12 @@ export const Memories = () => {
               <p>{item.fields.content}</p>
             </article>
           </figcaption>
+          <div
+            className={s.img_container}
+            style={{
+              backgroundImage: `url(${item.fields.thumbnail.fields.file.url})`,
+            }}
+          ></div>
         </figure>
       ))}
     </section>

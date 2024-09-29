@@ -21,24 +21,32 @@ export const Profiles = () => {
   return (
     <section>
       {profile?.items?.map((item) => (
-        <figure>
-          <h2>{item.fields.name}</h2>
-          <h2>{item.fields.race}</h2>
-          <h2>{item.fields.class}</h2>
-          <article>
-            <Markdown>{item.fields.description}</Markdown>
-          </article>
-          <article>
+        <figure className={s.Profile}>
+          <div className={s.overview}>
+            <div
+              className={s.hero}
+              style={{
+                backgroundImage: `url(${item.fields.hero.fields.file.url})`,
+              }}
+              alt={item.fields.hero.fields.file.title}
+            ></div>
+            <figcaption>
+              <h2 className={s.name}>{item.fields.name}</h2>
+              <hgroup>
+                <h3>{item.fields.race}</h3>
+                <h3>{item.fields.class}</h3>
+              </hgroup>
+              <section>
+                <article>
+                  <Markdown>{item.fields.description}</Markdown>
+                </article>
+              </section>
+            </figcaption>
+          </div>
+
+          <article className={s.backstory}>
             <Markdown>{item.fields.backstory}</Markdown>
           </article>
-
-          <div
-            className={s.hero}
-            style={{
-              backgroundImage: `url(${item.fields.hero.fields.file.url})`,
-            }}
-            alt={item.fields.hero.fields.file.title}
-          ></div>
         </figure>
       ))}
     </section>
