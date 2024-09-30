@@ -35,7 +35,7 @@
         text-align: center;
       }
       hgroup {
-        margin: 0 30%;
+        margin: 1rem 30%;
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: repeat(2, 1fr);
@@ -122,9 +122,10 @@
           text-align: center;
         }
         hgroup {
-          display: grid;
-          grid-template-columns: repeat(2, 1fr);
-          grid-template-rows: repeat(2, 1fr);
+          font-size: 1rem;
+          display: block;
+          margin: 1rem;
+
           * {
             text-align: center;
           }
