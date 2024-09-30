@@ -49,12 +49,12 @@ export const Profiles = () => {
             </figcaption>
           </div>
 
-          <div className={s.backstory}>
+          {/* <div className={s.backstory}>
             <div className={s.img_container}>
               <div className={s.hero}></div>
             </div>
             <Markdown className={s.markdown}>{item.fields.backstory}</Markdown>
-          </div>
+          </div> */}
         </figure>
       ))}
     </section>
