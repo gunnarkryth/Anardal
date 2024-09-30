@@ -2,33 +2,42 @@
   display: grid;
   grid-template-columns: 1fr 2fr;
   gap: 3rem;
-  padding: 1rem 1rem 1rem 1rem;
   margin-bottom: 3rem;
+  padding: 1rem 1rem 1rem 1rem;
   .overview {
     .img_container {
-      width: 100%;
-      height: auto;
-      margin-bottom: -150px;
       display: flex;
       justify-content: center;
+      margin-bottom: -150px;
+      width: 100%;
+      height: auto;
       .hero {
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        height: 350px;
-        width: 350px;
-        border-radius: 50%;
         box-shadow: 0rem 0rem 1rem rgb(0, 0, 0);
+        border-radius: 50%;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        width: 350px;
+        height: 350px;
       }
     }
     figcaption {
+      border-radius: 1rem;
       background-color: #1d1d22;
+      padding: 175px 1rem 3rem;
+      // height: 527px;
       color: white;
       font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
         Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
         sans-serif;
-      border-radius: 1rem;
-      padding: 175px 1rem 3rem 1rem;
+      h2.name {
+        font-size: 3rem;
+        text-align: center;
+      }
+      hgroup {
+        display: flex;
+        justify-content: space-evenly;
+      }
       p {
         margin-bottom: 1rem;
       }
@@ -36,33 +45,33 @@
   }
   .backstory {
     .img_container {
-      width: 100%;
-      height: auto;
-      margin-bottom: -3rem;
       display: flex;
       justify-content: center;
+      margin-bottom: -3rem;
+      width: 100%;
+      height: auto;
       .hero {
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        height: 100px;
-        width: 100px;
         border-radius: 50%;
         // box-shadow: 0rem 0rem 1rem rgb(0, 0, 0);
         background-image: url("public/book_256dp_E8EAED_FILL0_wght400_GRAD0_opsz48.svg");
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        width: 100px;
+        height: 100px;
       }
     }
     .markdown {
+      border-radius: 1rem;
       background-color: #1d1d22;
+      padding: 3rem 1rem 2rem 1rem;
+      color: white;
       font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
         Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
         sans-serif;
-      color: white;
-      padding: 3rem 1rem 2rem 1rem;
-      border-radius: 1rem;
       p {
-        font-size: 0.9rem;
         margin-bottom: 1rem;
+        font-size: 0.9rem;
       }
     }
   }

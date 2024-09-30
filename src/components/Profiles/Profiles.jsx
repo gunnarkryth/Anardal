@@ -35,6 +35,9 @@ export const Profiles = () => {
             <figcaption>
               <h2 className={s.name}>{item.fields.name}</h2>
               <hgroup>
+                  {item.fields.titles.map((item) => (
+                    <h3>{item}</h3>
+                  ))}
                 <h3>{item.fields.race}</h3>
                 <h3>{item.fields.class}</h3>
               </hgroup>
