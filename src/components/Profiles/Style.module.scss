@@ -39,7 +39,9 @@
         justify-content: space-evenly;
       }
       p {
-        margin-bottom: 1rem;
+        article {
+          margin-bottom: 1rem;
+        }
       }
     }
   }
@@ -115,8 +117,12 @@
           text-align: center;
         }
         hgroup {
-          display: flex;
-          justify-content: space-evenly;
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          grid-template-rows: repeat(2, 1fr);
+          * {
+            text-align: center;
+          }
         }
         p {
           margin-bottom: 1rem;
