@@ -54,11 +54,11 @@ export const Profiles = () => {
                 <h3>{item.fields.class}</h3>
               </hgroup>
               <div className={s.audio_player}>
-                <audio ref={audioPlayer} loop>
+                <audio ref={audioPlayer}>
                   <source
-                    // src={item.fields.theme.fields.file.url}
-                    src="https://www.youtube.com/watch?v=rMsTiz9HdaA"
-                    type="audio/mpeg"
+                    src={item.fields.theme.fields.file.url}
+                    // src="https://www.youtube.com/watch?v=rMsTiz9HdaA"
+                    // type="audio/mpeg"
                   />
                 </audio>
                 <button onClick={toggleMusic}>{isPlaying ? "❚❚" : "▶"}</button>
