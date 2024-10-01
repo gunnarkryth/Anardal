@@ -26,9 +26,9 @@ export const Memories = () => {
               <hgroup>
                 <h2>{item.fields.title}</h2>
               </hgroup>
-              <Markdown>
-                <p>{item.fields.content}</p>
-              </Markdown>
+              <article>
+                <Markdown>{item.fields.content}</Markdown>
+              </article>
             </article>
           </figcaption>
           <div
