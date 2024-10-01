@@ -58,14 +58,18 @@ body {
     }
   }
 }
+@media (max-width: 1000px) {
+  body {
+    padding: 1rem;
+  }
+}
 
 @media (max-width: 750px) {
   body {
     height: auto;
     overflow-x: hidden;
     object-fit: cover;
-  padding: 0;
-
+    padding: 0;
   }
   @font-face {
     src: url("public/Assets/Fonts/friz-quadrata-regular-os-5870333951e7c.woff");
