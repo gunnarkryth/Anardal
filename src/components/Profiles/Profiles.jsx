@@ -54,7 +54,7 @@ export const Profiles = () => {
                 <h3>{item.fields.class}</h3>
               </hgroup>
               <div className={s.audio_player}>
-                <audio ref={audioPlayer}>
+                <audio ref={audioPlayer} loop>
                   <source
                     src={item.fields.theme.fields.file.url}
                     type="audio/mpeg"
