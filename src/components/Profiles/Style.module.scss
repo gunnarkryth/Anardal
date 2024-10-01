@@ -1,4 +1,5 @@
 .Profile {
+  position: relative;
   // display: grid;
   grid-template-columns: 1fr 2fr;
   gap: 3rem;
@@ -35,11 +36,26 @@
         text-align: center;
       }
       hgroup {
-        margin: 1rem 30%;
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
         grid-template-rows: repeat(2, 1fr);
+        grid-template-columns: repeat(2, 1fr);
+        margin: 1rem 30%;
         * {
+          text-align: center;
+        }
+      }
+      .audio_player {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        button {
+          mix-blend-mode: screen;
+          background-color: hsl(36, 60%, 70%);
+          border: none;
+          border-radius: 50%;
+          width: 3rem;
+          height: 3rem;
+          font-size: 30px;
           text-align: center;
         }
       }
@@ -123,9 +139,9 @@
           text-align: center;
         }
         hgroup {
-          font-size: 1rem;
           display: none;
           margin: 1rem;
+          font-size: 1rem;
 
           * {
             text-align: center;

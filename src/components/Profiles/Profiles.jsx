@@ -1,5 +1,5 @@
 import * as contentful from "contentful";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import Markdown from "react-markdown";
 import s from "./Style.module.scss";
 
@@ -18,6 +18,18 @@ export const Profiles = () => {
   }, []);
   console.log(profile);
 
+  const audioPlayer = useRef(null);
+  const [isPlaying, setIsPlaying] = useState(null);
+
+  const toggleMusic = () => {
+    if (isPlaying) {
+      audioPlayer.current.pause();
+    } else {
+      audioPlayer.current.play();
+    }
+    setIsPlaying(!isPlaying);
+  };
+
   return (
     <section>
       {profile?.items?.map((item) => (
@@ -35,12 +47,21 @@ export const Profiles = () => {
             <figcaption>
               <h2 className={s.name}>{item.fields.name}</h2>
               <hgroup>
-                  {item.fields.titles.map((item) => (
-                    <h3>{item}</h3>
-                  ))}
+                {item.fields.titles.map((item) => (
+                  <h3>{item}</h3>
+                ))}
                 <h3>{item.fields.race}</h3>
                 <h3>{item.fields.class}</h3>
               </hgroup>
+              <div className={s.audio_player}>
+                <audio ref={audioPlayer}>
+                  <source
+                    src={item.fields.theme.fields.file.url}
+                    type="audio/mpeg"
+                  />
+                </audio>
+                <button onClick={toggleMusic}>{isPlaying ? "❚❚" : "▶"}</button>
+              </div>
               <section>
                 <article>
                   <Markdown>{item.fields.description}</Markdown>
