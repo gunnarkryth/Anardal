@@ -58,7 +58,6 @@ export const Profiles = () => {
                   <source
                     // src={item.fields.theme.fields.file.url}
                     src="https://www.youtube.com/watch?v=rMsTiz9HdaA"
-                    type="audio/mpeg"
                   />
                 </audio>
                 <button onClick={toggleMusic}>{isPlaying ? "❚❚" : "▶"}</button>
