@@ -56,7 +56,8 @@ export const Profiles = () => {
               <div className={s.audio_player}>
                 <audio ref={audioPlayer} loop>
                   <source
-                    src={item.fields.theme.fields.file.url}
+                    // src={item.fields.theme.fields.file.url}
+                    src="https://www.youtube.com/watch?v=rMsTiz9HdaA"
                     type="audio/mpeg"
                   />
                 </audio>
