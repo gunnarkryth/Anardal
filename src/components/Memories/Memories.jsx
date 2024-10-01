@@ -1,5 +1,6 @@
 import * as contentful from "contentful";
 import { useEffect, useState } from "react";
+import Markdown from "react-markdown";
 import s from "./Style.module.scss";
 
 export const Memories = () => {
@@ -19,14 +20,15 @@ export const Memories = () => {
     <section className={s.Memories}>
       {memory?.items?.map((item) => (
         <figure>
-          
           {/* <img src={item.fields.thumbnail.fields.file.url} alt="" /> */}
           <figcaption>
             <article>
               <hgroup>
                 <h2>{item.fields.title}</h2>
               </hgroup>
-              <p>{item.fields.content}</p>
+              <Markdown>
+                <p>{item.fields.content}</p>
+              </Markdown>
             </article>
           </figcaption>
           <div
